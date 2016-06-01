@@ -122,4 +122,38 @@ class JogoScene: SKScene {
         self.contadorPontos.text = String(self.pontos)
     }
     
+    func adicionarPonto(){
+        
+        self.pontos++
+        
+        /*
+         * Por curiosidade na atualização para o Swift 3.0, o código acima ficará como o abaixo
+         
+         self.pontos += 1
+         */
+        
+        self.contadorPontos.text = String(self.pontos)
+        
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        let touch = touches.first!
+        let location = touch.locationInNode(self)
+        let node = self.nodeAtPoint(location)
+        
+        if node == self.pauseButton {
+            //TODO pausar o jogo
+            self.paused = !self.paused
+            
+            if self.paused {
+                self.pauseButton.texture = SKTexture(imageNamed: "PlayButton")
+            } else {
+                self.pauseButton.texture = SKTexture(imageNamed: "PauseButton")
+            }
+            
+        }
+        
+    }
+    
 }
