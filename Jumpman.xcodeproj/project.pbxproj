@@ -17,6 +17,7 @@
 		9F71D8BE1CFE02A40006945F /* JogoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F71D8BD1CFE02A40006945F /* JogoScene.swift */; };
 		9F71D8C01CFE02E00006945F /* JogoScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9F71D8BF1CFE02E00006945F /* JogoScene.sks */; };
 		9FF34FBD1CFF9257000FCE76 /* Categorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF34FBC1CFF9257000FCE76 /* Categorias.swift */; };
+		9FF34FBF1CFF9344000FCE76 /* Obstaculo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF34FBE1CFF9344000FCE76 /* Obstaculo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9F71D8BD1CFE02A40006945F /* JogoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JogoScene.swift; sourceTree = "<group>"; };
 		9F71D8BF1CFE02E00006945F /* JogoScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = JogoScene.sks; sourceTree = "<group>"; };
 		9FF34FBC1CFF9257000FCE76 /* Categorias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categorias.swift; sourceTree = "<group>"; };
+		9FF34FBE1CFF9344000FCE76 /* Obstaculo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Obstaculo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				9F71D8B71CFDF70C0006945F /* Info.plist */,
 				9F71D8BD1CFE02A40006945F /* JogoScene.swift */,
 				9F71D8BF1CFE02E00006945F /* JogoScene.sks */,
+				9FF34FBE1CFF9344000FCE76 /* Obstaculo.swift */,
 			);
 			path = Jumpman;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				9F71D8AC1CFDF70C0006945F /* InicialScene.swift in Sources */,
 				9F71D8AE1CFDF70C0006945F /* GameViewController.swift in Sources */,
+				9FF34FBF1CFF9344000FCE76 /* Obstaculo.swift in Sources */,
 				9F71D8A81CFDF70C0006945F /* AppDelegate.swift in Sources */,
 				9FF34FBD1CFF9257000FCE76 /* Categorias.swift in Sources */,
 				9F71D8BE1CFE02A40006945F /* JogoScene.swift in Sources */,

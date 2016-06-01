@@ -20,7 +20,7 @@ class JogoScene: SKScene {
         self.animarTerra()
         
         self.prepararContadorEPauseButton()
-        
+        self.criarObstaculo()
     }
     
     func animarNuvens(){
@@ -157,6 +157,29 @@ class JogoScene: SKScene {
             }
             
         }
+        
+    }
+    
+    func criarObstaculo(){
+    
+        let terraModelo = self.childNodeWithName("Terra_0") as! SKSpriteNode
+        let larguraDaTela = self.size.width
+        
+        let obstaculo0 = self.childNodeWithName("Obs_0") as! SKSpriteNode
+        let obstaculo1 = self.childNodeWithName("Obs_1") as! SKSpriteNode
+        
+        let aleatorio : Int = random() % 2
+        
+        let obstaculoUsado = (aleatorio == 0) ? obstaculo0.copy() as! Obstaculo : obstaculo1.copy() as! Obstaculo
+        
+        self.addChild(obstaculoUsado)
+        
+        let posicaoY = terraModelo.position.y + terraModelo.size.height / 2 + obstaculoUsado.size.height / 2
+        let posicaoX = larguraDaTela + obstaculoUsado.size.width
+        
+        obstaculoUsado.position = CGPoint(x: posicaoX, y: posicaoY)
+        
+        obstaculoUsado.aplicarAndar(larguraDaTela)
         
     }
     
