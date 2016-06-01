@@ -10,11 +10,16 @@ import SpriteKit
 
 class JogoScene: SKScene {
     
+    var contadorPontos = SKLabelNode()
+    var pauseButton = SKSpriteNode()
+    var pontos = 0
     
     override func didMoveToView(view: SKView) {
         
         self.animarNuvens()
         self.animarTerra()
+        
+        self.prepararContadorEPauseButton()
         
     }
     
@@ -97,5 +102,24 @@ class JogoScene: SKScene {
         
     }
     
+    func prepararContadorEPauseButton(){
+        
+        self.contadorPontos = self.childNodeWithName("ContadorDePontos") as! SKLabelNode
+        self.pauseButton = self.childNodeWithName("PauseButton") as! SKSpriteNode
+        
+        let margem : CGFloat = 20.0
+        
+        let larguraDaTela = self.view!.bounds.width
+        let alturaDaTela = self.view!.bounds.height
+        
+        let posicaoY = alturaDaTela/2 - margem
+        let posicaoXDoBotaoDePause = larguraDaTela/2 - margem
+        let posicaoXDoContador = -larguraDaTela/2 + margem
+        
+        self.contadorPontos.position = CGPoint(x: posicaoXDoContador, y: posicaoY)
+        self.pauseButton.position = CGPoint(x: posicaoXDoBotaoDePause, y: posicaoY)
+        
+        self.contadorPontos.text = String(self.pontos)
+    }
     
 }
