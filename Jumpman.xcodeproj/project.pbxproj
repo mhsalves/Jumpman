@@ -14,6 +14,8 @@
 		9F71D8B11CFDF70C0006945F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F71D8AF1CFDF70C0006945F /* Main.storyboard */; };
 		9F71D8B31CFDF70C0006945F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F71D8B21CFDF70C0006945F /* Assets.xcassets */; };
 		9F71D8B61CFDF70C0006945F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F71D8B41CFDF70C0006945F /* LaunchScreen.storyboard */; };
+		9F71D8BE1CFE02A40006945F /* JogoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F71D8BD1CFE02A40006945F /* JogoScene.swift */; };
+		9F71D8C01CFE02E00006945F /* JogoScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9F71D8BF1CFE02E00006945F /* JogoScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		9F71D8B21CFDF70C0006945F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F71D8B51CFDF70C0006945F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F71D8B71CFDF70C0006945F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F71D8BD1CFE02A40006945F /* JogoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JogoScene.swift; sourceTree = "<group>"; };
+		9F71D8BF1CFE02E00006945F /* JogoScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = JogoScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				9F71D8B21CFDF70C0006945F /* Assets.xcassets */,
 				9F71D8B41CFDF70C0006945F /* LaunchScreen.storyboard */,
 				9F71D8B71CFDF70C0006945F /* Info.plist */,
+				9F71D8BD1CFE02A40006945F /* JogoScene.swift */,
+				9F71D8BF1CFE02E00006945F /* JogoScene.sks */,
 			);
 			path = Jumpman;
 			sourceTree = "<group>";
@@ -132,6 +138,7 @@
 				9F71D8AA1CFDF70C0006945F /* InicialScene.sks in Resources */,
 				9F71D8B61CFDF70C0006945F /* LaunchScreen.storyboard in Resources */,
 				9F71D8B31CFDF70C0006945F /* Assets.xcassets in Resources */,
+				9F71D8C01CFE02E00006945F /* JogoScene.sks in Resources */,
 				9F71D8B11CFDF70C0006945F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +153,7 @@
 				9F71D8AC1CFDF70C0006945F /* InicialScene.swift in Sources */,
 				9F71D8AE1CFDF70C0006945F /* GameViewController.swift in Sources */,
 				9F71D8A81CFDF70C0006945F /* AppDelegate.swift in Sources */,
+				9F71D8BE1CFE02A40006945F /* JogoScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

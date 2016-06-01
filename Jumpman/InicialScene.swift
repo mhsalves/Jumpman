@@ -10,17 +10,16 @@ import SpriteKit
 
 class InicialScene: SKScene {
     
-    override func didMoveToView(view: SKView) {
-        
-        
-        
-        
-    }
-    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
         
-        
+        if let scene = JogoScene(fileNamed:"JogoScene") {
+            
+            let trans = SKTransition.doorsOpenHorizontalWithDuration(0.8)
+            scene.scaleMode = .AspectFill
+            self.view?.presentScene(scene, transition: trans)
+            
+        }
         
     }
    
