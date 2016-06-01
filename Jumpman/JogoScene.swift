@@ -77,6 +77,10 @@ class JogoScene: SKScene {
         let terra1 = self.childNodeWithName("Terra_1") as! SKSpriteNode
         let terra2 = self.childNodeWithName("Terra_2") as! SKSpriteNode
         
+        terra0.physicsBody?.categoryBitMask = Categorias.Terra
+        terra1.physicsBody?.categoryBitMask = Categorias.Terra
+        terra2.physicsBody?.categoryBitMask = Categorias.Terra
+        
         //Determinando distancia a ser movida (tamanho da terra)
         let distancia = terra0.size.width
         
