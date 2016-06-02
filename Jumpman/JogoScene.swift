@@ -24,6 +24,7 @@ class JogoScene: SKScene {
         self.prepararContadorEPauseButton()
         
         self.iniciarJogo()
+        
     }
     
     func animarNuvens(){
