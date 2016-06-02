@@ -17,6 +17,8 @@
 		9F71D8BE1CFE02A40006945F /* JogoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F71D8BD1CFE02A40006945F /* JogoScene.swift */; };
 		9F71D8C01CFE02E00006945F /* JogoScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9F71D8BF1CFE02E00006945F /* JogoScene.sks */; };
 		9FB10CB81CFFC97100B7DC25 /* Personagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB10CB71CFFC97100B7DC25 /* Personagem.swift */; };
+		9FB10CBA1D00069100B7DC25 /* FimJogoScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9FB10CB91D00069100B7DC25 /* FimJogoScene.sks */; };
+		9FB10CBC1D00078E00B7DC25 /* PauseScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9FB10CBB1D00078E00B7DC25 /* PauseScene.sks */; };
 		9FF34FBD1CFF9257000FCE76 /* Categorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF34FBC1CFF9257000FCE76 /* Categorias.swift */; };
 		9FF34FBF1CFF9344000FCE76 /* Obstaculo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF34FBE1CFF9344000FCE76 /* Obstaculo.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +36,8 @@
 		9F71D8BD1CFE02A40006945F /* JogoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JogoScene.swift; sourceTree = "<group>"; };
 		9F71D8BF1CFE02E00006945F /* JogoScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = JogoScene.sks; sourceTree = "<group>"; };
 		9FB10CB71CFFC97100B7DC25 /* Personagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Personagem.swift; sourceTree = "<group>"; };
+		9FB10CB91D00069100B7DC25 /* FimJogoScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FimJogoScene.sks; sourceTree = "<group>"; };
+		9FB10CBB1D00078E00B7DC25 /* PauseScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PauseScene.sks; sourceTree = "<group>"; };
 		9FF34FBC1CFF9257000FCE76 /* Categorias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categorias.swift; sourceTree = "<group>"; };
 		9FF34FBE1CFF9344000FCE76 /* Obstaculo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Obstaculo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +85,8 @@
 				9F71D8BF1CFE02E00006945F /* JogoScene.sks */,
 				9FF34FBE1CFF9344000FCE76 /* Obstaculo.swift */,
 				9FB10CB71CFFC97100B7DC25 /* Personagem.swift */,
+				9FB10CB91D00069100B7DC25 /* FimJogoScene.sks */,
+				9FB10CBB1D00078E00B7DC25 /* PauseScene.sks */,
 			);
 			path = Jumpman;
 			sourceTree = "<group>";
@@ -148,7 +154,9 @@
 				9F71D8B61CFDF70C0006945F /* LaunchScreen.storyboard in Resources */,
 				9F71D8B31CFDF70C0006945F /* Assets.xcassets in Resources */,
 				9F71D8C01CFE02E00006945F /* JogoScene.sks in Resources */,
+				9FB10CBA1D00069100B7DC25 /* FimJogoScene.sks in Resources */,
 				9F71D8B11CFDF70C0006945F /* Main.storyboard in Resources */,
+				9FB10CBC1D00078E00B7DC25 /* PauseScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

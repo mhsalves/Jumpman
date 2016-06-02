@@ -161,10 +161,20 @@ class JogoScene: SKScene, SKPhysicsContactDelegate {
             
             if self.paused {
                 self.pauseButton.texture = SKTexture(imageNamed: "PlayButton")
+                self.pararTimerDoJogo()
+                self.mostrarTelaDePause(true)
             } else {
                 self.pauseButton.texture = SKTexture(imageNamed: "PauseButton")
+                self.iniciarJogo()
+                self.mostrarTelaDePause(false)
             }
+        } else if node.name == "RetryButton" {
             
+            let scene = JogoScene(fileNamed: "JogoScene")!
+            let trans = SKTransition.fadeWithDuration(0.8)
+            
+            self.view!.presentScene(scene, transition: trans)
+        
         } else {
             //TODO Jump
             if self.personagem.physicsBody?.velocity.dy == 0 {
@@ -235,6 +245,7 @@ class JogoScene: SKScene, SKPhysicsContactDelegate {
         } else if (contB.categoryBitMask == Categorias.Personagem && contA.categoryBitMask == Categorias.Obstaculo) || (contA.categoryBitMask == Categorias.Personagem && contB.categoryBitMask == Categorias.Obstaculo) {
             
             self.paused = true
+            self.mostrarTelaDeFimDeJogo()
             
         }
         
@@ -259,4 +270,19 @@ class JogoScene: SKScene, SKPhysicsContactDelegate {
         
         
     }
+    
+    func mostrarTelaDePause( mostrar : Bool ){
+        
+        let pauseTela = self.childNodeWithName("PauseTela")
+        pauseTela?.hidden = !mostrar
+        
+    }
+    
+    func mostrarTelaDeFimDeJogo(){
+        
+        let pauseTela = self.childNodeWithName("FimJogoTela")
+        pauseTela?.hidden = false
+        
+    }
+    
 }

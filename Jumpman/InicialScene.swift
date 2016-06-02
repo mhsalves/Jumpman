@@ -15,7 +15,7 @@ class InicialScene: SKScene {
         
         if let scene = JogoScene(fileNamed:"JogoScene") {
             
-            let trans = SKTransition.doorsOpenHorizontalWithDuration(0.8)
+            let trans = SKTransition.pushWithDirection(.Up, duration: 0.8)
             scene.scaleMode = .AspectFill
             self.view?.presentScene(scene, transition: trans)
             
