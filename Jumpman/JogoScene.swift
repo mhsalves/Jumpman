@@ -8,13 +8,14 @@
 
 import SpriteKit
 
-class JogoScene: SKScene {
+class JogoScene: SKScene, SKPhysicsContactDelegate {
     
     var timer = NSTimer()
     
     var contadorPontos = SKLabelNode()
     var pauseButton = SKSpriteNode()
     var pontos = 0
+    var personagem = SKSpriteNode()
     
     override func didMoveToView(view: SKView) {
         
@@ -24,6 +25,10 @@ class JogoScene: SKScene {
         self.prepararContadorEPauseButton()
         
         self.iniciarJogo()
+        
+        self.personagem = self.childNodeWithName("Personagem") as! Personagem
+        
+        physicsWorld.contactDelegate = self
         
     }
     
@@ -160,6 +165,13 @@ class JogoScene: SKScene {
                 self.pauseButton.texture = SKTexture(imageNamed: "PauseButton")
             }
             
+        } else {
+            //TODO Jump
+            if self.personagem.physicsBody?.velocity.dy == 0 {
+                let pulo = SKAction.applyImpulse(CGVector(dx: 0, dy: 160), duration: 0.2)
+                self.personagem.runAction(pulo)
+                //self.personagemEstaNoChao = false
+            }
         }
         
     }
@@ -175,6 +187,7 @@ class JogoScene: SKScene {
         let aleatorio : Int = random() % 2
         
         let obstaculoUsado = (aleatorio == 0) ? obstaculo0.copy() as! Obstaculo : obstaculo1.copy() as! Obstaculo
+        obstaculoUsado.aplicarFisicaAoMarcador()
         
         self.addChild(obstaculoUsado)
         
@@ -201,6 +214,49 @@ class JogoScene: SKScene {
     func pararTimerDoJogo() {
         
         self.timer.invalidate()
+        
+    }
+    
+    func didBeginContact(contact: SKPhysicsContact) {
+        
+        let contA = contact.bodyA
+        let contB = contact.bodyB
+        
+        if contA.categoryBitMask == Categorias.Personagem && contB.categoryBitMask == Categorias.Marcador {
+            
+            let marcador = contB.node as! SKSpriteNode
+            let obstaculo = marcador.parent as! Obstaculo
+            
+            if !obstaculo.pontuado {
+                self.adicionarPonto()
+                obstaculo.pontuado = true
+            }
+            
+        } else if (contB.categoryBitMask == Categorias.Personagem && contA.categoryBitMask == Categorias.Obstaculo) || (contA.categoryBitMask == Categorias.Personagem && contB.categoryBitMask == Categorias.Obstaculo) {
+            
+            self.paused = true
+            
+        }
+        
+        
+        
+        //
+        //        if (contA.contactTestBitMask == 1 && contB.contactTestBitMask == 3) || (contA.contactTestBitMask == 3 && contB.contactTestBitMask == 1) {
+        //            //Personagem bateu no chao
+        //            self.personagemEstaNoChao = true
+        //        } else if ( contA.contactTestBitMask == 1 && contB.contactTestBitMask == 2 ) {
+        //            //Personagem bateu no obstaculo
+        //            //TODO Fim de jogo
+        //            self.paused = true
+        //        } else if ( contA.contactTestBitMask == 1 && contB.contactTestBitMask == 4 ) {
+        //            //Personagem bateu no contato do obstaculo
+        //
+        //            self.adicionarPonto()
+        //        }
+        
+        print(contB.categoryBitMask)
+        print(contB.node?.name)
+        
         
     }
 }

@@ -10,10 +10,10 @@ import Foundation
 
 struct Categorias {
     
-    static let Nenhum : UInt32 = 0
-    static let Personagem : UInt32 = 1
-    static let Terra : UInt32 = 2
-    static let Obstaculo : UInt32 = 3
-    static let Marcador : UInt32 = 4
+    static let Nenhum : UInt32 = 0x1 << 0
+    static let Personagem : UInt32 = 0x1 << 1
+    static let Terra : UInt32 = 0x1 << 2
+    static let Obstaculo : UInt32 = 0x1 << 3
+    static let Marcador : UInt32 = 0x1 << 4
     
 }

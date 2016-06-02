@@ -22,6 +22,9 @@ class Obstaculo: SKSpriteNode {
         super.init(coder: aDecoder)
         
         self.marcador = self.childNodeWithName("Marcador") as! SKSpriteNode
+        self.physicsBody?.categoryBitMask = Categorias.Obstaculo
+        self.physicsBody?.contactTestBitMask = Categorias.Personagem
+//        self.physicsBody?.collisionBitMask = Categorias.Personagem | Categorias.Obstaculo
         self.aplicarFisicaAoMarcador()
         
     }
@@ -33,7 +36,7 @@ class Obstaculo: SKSpriteNode {
         self.marcador.physicsBody?.allowsRotation = false
         self.marcador.physicsBody?.dynamic = false
         self.marcador.physicsBody?.categoryBitMask = Categorias.Marcador
-        self.marcador.physicsBody?.contactTestBitMask = Categorias.Personagem | Categorias.Marcador
+        self.marcador.physicsBody?.contactTestBitMask = Categorias.Personagem
         self.marcador.physicsBody?.collisionBitMask = Categorias.Nenhum
         
     }

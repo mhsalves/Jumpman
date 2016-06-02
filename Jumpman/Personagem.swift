@@ -15,7 +15,7 @@ class Personagem: SKSpriteNode {
         
         self.physicsBody?.categoryBitMask = Categorias.Personagem
         self.physicsBody?.contactTestBitMask = Categorias.Obstaculo
-        self.physicsBody?.collisionBitMask = Categorias.Terra | Categorias.Personagem
+        self.physicsBody?.collisionBitMask = Categorias.Terra | Categorias.Obstaculo
         
     }
     
