@@ -10,6 +10,8 @@ import SpriteKit
 
 class JogoScene: SKScene {
     
+    var timer = NSTimer()
+    
     var contadorPontos = SKLabelNode()
     var pauseButton = SKSpriteNode()
     var pontos = 0
@@ -20,7 +22,8 @@ class JogoScene: SKScene {
         self.animarTerra()
         
         self.prepararContadorEPauseButton()
-        self.criarObstaculo()
+        
+        self.iniciarJogo()
     }
     
     func animarNuvens(){
@@ -183,4 +186,20 @@ class JogoScene: SKScene {
         
     }
     
+    func iniciarJogo(){
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.4, target: self, selector: Selector("criarObstaculo"), userInfo: nil, repeats: true)
+        /*
+         * Por curiosidade na atualização para o Swift 3.0, o código acima ficará como o abaixo
+         
+         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(JogoScene.aparecerObstaculo), userInfo: nil, repeats: true)
+         */
+        
+    }
+    
+    func pararTimerDoJogo() {
+        
+        self.timer.invalidate()
+        
+    }
 }
