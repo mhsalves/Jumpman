@@ -4,3 +4,5 @@ _Projeto de ensino sobre desenvolvimento jogos usando XCode aplicados no evento 
 > ## Setup
  - Usar Xcode
  - Mac OX
+
+https://gitlab.com/mhsalves/Encosis2016-Jumpman
